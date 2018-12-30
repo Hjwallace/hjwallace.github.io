@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,11 +6,36 @@
     <title>Hunter Wallace</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <script src="main.js"></script> <!-- My JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--Jquery Import-->
+    <script src="jquery.js"></script> <!-- My Jquery -->
+
 </head>
 <body>
-    <h1>Hunter Wallace</h1>
+
+   <h1 class="topBar">Hunter Wallace</h1>
+   <div class="fancyIntro">
+       <div>
+            <h1 id="openingPanel" class="changingText"><script>typeWriter()</script></h1>
+       </div>
+   </div>
+
+   <div class="storyContainer">
+
+        <h1>My Story and Work</h1>
+
+        <div class="hideme storyBox">
+            <h1>Home</h1>
+            <p style="margin-top: 10px;">I was born and rasied in a small town called Zionsville in Indiana</p>
+            <img src="home.png" class="indianaPic">
+        </div>
+
+        <div class="hideme storyBox" style="float: right ; margin-top: 25px;">
+            <h1>Early Education</h1>
+        </div>
+
+   </div> <!-- End of Story Container-->
+
     
-    <p>My first Website</p>
 </body>
 </html>
