@@ -1,0 +1,57 @@
+
+body{
+    padding: 0;
+    margin: 0 auto;
+    font-family:  'helvetica';
+    font-weight: 50px;
+
+}
+
+
+h1{
+    text-align: center;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h2{
+    display: inline-block;
+    margin: 5px;
+}
+
+.header-container{
+    background-color: aquamarine;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.align-left{
+    float: left;
+    margin-left: 20px;
+}
+
+.align-right{
+    float: right;
+    margin-right: 20px;
+}
+
+.fancyIntro{
+    text-align: center;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url("quoteFrameFinal.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 6%;
+}
+
+.changingText{
+    font-family:  'helvetica';
+    font-weight: 50px;
+    padding: 5px;
+    z-index: 1;
+    vertical-align: middle;
+}
