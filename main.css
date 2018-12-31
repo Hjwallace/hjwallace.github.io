@@ -4,12 +4,20 @@ body{
     margin: 0 auto;
     font-family:  'helvetica';
     font-weight: 50px;
+    color: #45A29E;
 }
 
 p{
     margin: 0;
     font-family:  'helvetica';
     font-weight: 50px;
+}
+
+h1{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
  .changeSize{
@@ -26,14 +34,13 @@ h2{
 }
 
 .header-container{
-    background-color: aquamarine;
+    background-color: #0B0C10;
     padding: 0;
     display: inline-block;
     width: 100%;
 }
 
 .align-left{
-    
     float: left;
     margin-left: 20px;
 }
@@ -46,13 +53,13 @@ h2{
 
 .fancyIntro{
     text-align: center;
-    min-width: 100%;
-    height: 55%;
+    max-width: 100%;
+    height: 64%;
     background-image: url("quoteFrameFinal.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 6%;
+    
 }
 
 
@@ -60,9 +67,20 @@ h2{
     font-family:  'helvetica';
     font-weight: 50px;
     z-index: 1;
+    margin-top: 8%;
 }
 
 .body-container{
-    float: left;
-    clear: both;
+    width: 100%;
+    height: 1000px; /* CHANGE THIS SIZE ONCE CONTENT IS IN */
+    background-color: #C5C6C7;
+    padding-top: 5px;
+
+}
+
+.inner-container{
+    background-color: #1F2833;
+    margin: 5px;
+    height: 800px;
+    padding: 5px;
 }

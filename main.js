@@ -40,3 +40,8 @@ function typeWriter() {
         j = 1;
     }
 }
+
+function WIPAlert(){
+    alert("Hello and thank you for showing interest! I am still currently working on bringing this feature in and will hopefully have it done soon!");
+
+}
