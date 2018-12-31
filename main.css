@@ -4,11 +4,15 @@ body{
     margin: 0 auto;
     font-family:  'helvetica';
     font-weight: 50px;
-
 }
 
+p{
+    margin: 0;
+    font-family:  'helvetica';
+    font-weight: 50px;
+}
 
-h1{
+ .changeSize{
     text-align: center;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -29,6 +33,7 @@ h2{
 }
 
 .align-left{
+    
     float: left;
     margin-left: 20px;
 }
@@ -38,20 +43,26 @@ h2{
     margin-right: 20px;
 }
 
+
 .fancyIntro{
     text-align: center;
     min-width: 100%;
-    min-height: 100%;
+    height: 55%;
     background-image: url("quoteFrameFinal.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     padding-top: 6%;
 }
+
 
 .changingText{
     font-family:  'helvetica';
     font-weight: 50px;
-    padding: 5px;
     z-index: 1;
-    vertical-align: middle;
+}
+
+.body-container{
+    float: left;
+    clear: both;
 }
