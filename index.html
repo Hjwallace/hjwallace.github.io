@@ -5,35 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hunter Wallace</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> <!--Boot Strap-->
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--Jquery Import-->
-
-    <script src="jquery.js"></script>
-
 </head>
 <body>
-
-    <div class="header-container">
-        <h2 class="align-left">Hunter Wallace</h2>
-        <h2 class="align-right">Contact</h2>
-        <h2 class="align-right" onclick="WIPAlert()">Blog</h2>
-        <h2 class="align-right">Home</h2>
     
-    </div>
+        <header class="container">
+                <div class="row">
+                  <h1 class="col-sm-8">Hunter Wallace</h1>
+                  <nav class="col-sm-6">
+                    <p>Home</p>
+                    <p onclick="WIPAlert()">Blog</p>
+                    <a href="#contact" style="text-decoration : none; color : #000000;">Contact</a>
+                  </nav>
+                </div>
+          </header>
 
-    <div class="fancyIntro">
-            <div>
-                 <h2 id="openingPanel" class="changingText changeSize"><script>typeWriter()</script></h2>
-            </div>
-    </div>
+          <section class="jumbotron jumbotron-fluid">
+              <div class="container">
+                <div class="row text-center">
+                  <h2 id="openingPanel"><script>typeWriter()</script></h2> <!-- Changing Text -->
+                </div>
+              </div>
+          </section>
 
-    <div class="body-container">
-        <div class="inner-container">
-                <h1 style="text-align:center">Hello! Building in Progress</h1>
-        </div>
+          <header class="container"> <!--Generic Header-->
+            <div class="row">
+              <h1 class="text-center">Projects</h1>
+            </div>  
+          </header>
 
-    </div>
+          <section class="container">
+              <div class="row">
+                <figure class="col-sm-6">
+                  <h1>Study Buddy</h1>
+                  <p>Study buddy was my first big software project with three other friends. Together, we created a multitasking all in one window suite.
+                    to help college students maintain an efficient work enviroment.
+                  </p>
+                  <a href="https://github.com/Hjwallace/Study-Buddy" target="_"><img src="sbPic.png"/></a>
+                  <h2>Made With</h2>
+                  <p>Java</p>
+                  <p>JavaFx</p>
+                  
 
+                </figure>
+                <figure class="col-sm-6">
+                  <h1>hunterwallace.com</h1>
+                  <p>This is my first big time creating and hosting a website. With it I hope to show off my work and progression as I continue to learn more about web developement as well as other computer science fields.</p>
+                  <img src="websitePic.png"/>
+                  <h2>Made With</h2>
+                  <p>HTML/CSS</p>
+                  <p>JavaScript</p>
+                  <p>BootStrap</p>
+                </figure>
+              </div>
+            </section>
+
+
+            <header class="container"> <!--Generic Header-->
+              <div class="row">
+                <h1 class="text-center">Work In Progress - More to be Added Soon</h1>
+              </div>  
+            </header>
+
+            <footer class="container">
+                <div class="row">
+                  <p class="col-sm-4" id = "contact">&copy; 2019 Hunter Wallace</p>
+                  <ul class="col-sm-8">
+                    <li class="col-sm-1">
+                      <a href="https://twitter.com/hunterjw38" target="_"><img src="https://image.flaticon.com/icons/svg/8/8800.svg" ></a> <!--Twitter-->
+                    </li>
+                 
+                    <li class="col-sm-1">
+                        <a href="https://github.com/Hjwallace" target="_"><img src="https://image.flaticon.com/icons/svg/25/25231.svg"></a> <!--GitHub-->
+                      </li>
+                  </ul>
+                </div>
+              </footer>
+
+    
 </body>
 </html>
