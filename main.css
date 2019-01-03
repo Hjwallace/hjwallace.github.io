@@ -20,14 +20,14 @@ header h1 {
 }
 
 header nav {
-  display: flex;
+  display: -webkit-inline-box;
   justify-content: flex-end;
 
 
 }
 
 header p {
-  padding: 0 20px;
+  padding: 0 20px 0 0px;
   margin: 0;
 }
 
