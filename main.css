@@ -77,6 +77,10 @@ section .row img {
   height: 325px;
 }
 
+.col-2 p{
+  margin-right: 5px;
+}
+
 .btn.btn-primary:hover {
   color: #ffffff;
   background-color: #fbd1d5;
