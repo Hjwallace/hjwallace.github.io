@@ -72,6 +72,11 @@ section .row img {
   background-color: #ffffff;
 }
 
+.col-sm-6 img{
+  width: 500px;
+  height: 325px;
+}
+
 .btn.btn-primary:hover {
   color: #ffffff;
   background-color: #fbd1d5;
