@@ -42,6 +42,5 @@ function typeWriter() {
 }
 
 function WIPAlert(){
-    alert("Hello and thank you for showing interest! I am still currently working on bringing this feature in and will hopefully have it done soon!");
-
+    window.open("https://medium.com/@hunterjwallace");
 }
