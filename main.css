@@ -82,7 +82,9 @@ html, body {
   height: auto;
   max-height: 15vw;
   object-fit: fill;
-  margin: 2px;
+  margin: 5px;
+  padding: 5px;
+  
 }
 
 .card{
