@@ -1,151 +1,135 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hunter Wallace</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-
-    <!--Boot Strap-->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.js"></script>
     <link rel="icon" href="favicon.png">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
+
+<!--Top Container Start-->
+
+<!--Top Container End-->
+
+<div class="jumbotron jumbotron-fluid introPortion">
+
     
-        <header class="container">
-                <div class="row">
-                  <h1 class="col-sm-8">Hunter Wallace</h1>
-                  <nav class="col-2">
-                      <p style="text-decoration : none; color : #000000;"><a style="text-decoration : none; color : #000000;" href="Resume.pdf" target="_blank" download>Resume</a></p>
-                     <a href="#contact" style="text-decoration : none; color : #000000;"><p class="text-justify">Contact</p></a>
-                  </nav>
-                </div>
-          </header>
+    <div class="container" style="margin-bottom:0">
+      <h1 class="display-3">Hello, I'm Hunter Wallace!</h1>
+      <br>
+      <br>
+      <h3>Student | Aspiring Full Stack Developer | Adventurer</h3>
+      <br>
+      <br>
+      <br>
 
-          <section class="jumbotron jumbotron-fluid">
-              <div class="container">
-                <div class="row text-center">
-                  <h2 id="openingPanel" class="changingText"><script>typeWriter()</script></h2> <!-- Changing Text -->
-                </div>
-              </div>
-          </section>
+      <br> <!-- Need to find better way to indent arrow-->
+      <br>
+      <br>
+      <br>
+      <h5>My story</h5>
+      <img src="downArrow.png" class = "scrollButton" />
+    </div>
+  </div>
 
-          <header class="container"> <!--Generic Header-->
-            <div class="row">
-              <h1 class="text-center" id = "education" >My Story and Education</h1>
-            </div>  
-          </header>
+  <div class="jumbotron jumbotron-fluid secondPortion" id="part2">
+      <div class="container">
+        <h1 class="display-3">Who I Am</h1>
 
-        <section class="container">
-          <div class="row">
-            <figure class="col-sm-6">
-              <h3>-Born and Raised in Zionsville,Indiana</h3>
-              <h3>-Currently a sophomore aspiring to become a Full Stack Developer</h3>
-              <h3>-Always excited to meet new people and connect with great teams to create great work</h3>
-              <h3>-Extremely eager to gain internship experience to gain real world expreience and do the things I love</h3>
-              <h3>-I enjoy working with multiple languages and concepts. I currently specialize with Front End skills and am very excited 
-                to begin learning Back End concepts as well as gaining expereince with JS frameworks
-              </h3>
+        <p class="lead" style="margin-top:5px;">I am majoring in Computer Science and minoring in Business Information Technology At Ball State University. 
+          I have loved my education and am excited to continue on my path. I love to hike and travel as there are so many amazing things to see and stories to be heard. 
+          I dream to move out west and become a Full Stack Developer until I can retire and become a professor at a local college.
+       </p>    
+       
 
-              
-            </figure>
-            <figure class="col-sm-6">
-              <h1>College</h1>
-              <h3>Ball State University</h3>
-              <h4>Diploma Type: Bachelor's in Computer Science</h4>
-              <a target="_"><img src="ballstate.jpg"/></a>
-            </figure>
-          </div>
-        </section>
 
-          <header class="container"> <!--Generic Header-->
-            <div class="row">
-              <h1 class="text-center" id = "projects">Projects</h1>
-            </div>  
-          </header>
+          <a href="Resume.pdf" target="_blank" download> <img src="resume.svg" class="resumeImg" > </a>
+          <h4 style="text-decoration : none; color : #000000;"><a style="text-decoration : none; color : #000000;" href="Resume.pdf" target="_blank" download>Resume</a></h4>
 
+       
+       <h1 class="display-3">Skills</h1>
+
+       <div class="card" style="width: 18rem; display: inline-block;">
+        <img class="card-img-top" src="coding.svg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Web Developement</h5>
+          <p>HTML/CSS</p>
+          <p>JS</p>
+          <p>BootStrap</p>
+
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem; display: inline-block;">
+        <img class="card-img-top" src="other.svg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Other Languages</h5>
+          <p>Java</p>
+          <p>Python</p>
+          <p>Light C++/Unreal</p>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem; display: inline-block;">
+        <img class="card-img-top" src="tools.svg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Tools</h5>
+          <p>Git/Github Pages</p>
+          <p>P4V</p>
+          <p>Affinity Publisher</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid secondPortion" id="part3">
+      <div class="container">
+        <h1 class="display-3">Projects</h1>
           <section class="container">
-              <div class="row">
-                <figure class="col-sm-6">
-                  <h1>Study Buddy</h1>
-                  <p>Study buddy was my first big software project with three other friends. Together, we created a multitasking all in one window suite
-                    to help college students maintain an efficient work enviroment.
-                  </p>
-                  <a href="https://github.com/Hjwallace/Study-Buddy" target="_"><img src="sbPic.png"/></a>
-                  <h2>Made With</h2>
-                  <p>Java</p>
-                  <p>JavaFx</p>
-                  <p>CSS</p>
-                </figure>
-                <figure class="col-sm-6">
-                  <h1>hunterwallace.com</h1>
-                  <p>This is my first big time creating and hosting a website. With it I hope to show off my work and progression as I continue to learn more about web developement as well as other computer science fields.</p>
-                  <img src="websitePic.png"/>
-                  <h2>Made With</h2>
-                  <p>HTML/CSS</p>
-                  <p>JavaScript</p>
-                  <p>BootStrap</p>
-                </figure>
-              </div>
-            </section>
+            <div class="row">
+              <figure class="col-sm-6">
+                <h1>Study Buddy</h1>
+                <p>Study buddy was my first big software project with three other friends. Together, we created a multitasking all in one window suite
+                  to help college students maintain an efficient work enviroment and be able to focus on any task at hand.
+                </p>
+                <a href="https://github.com/Hjwallace/Study-Buddy" target="_"><img src="sbPic.png"/></a>
+                <h2>Made With</h2>
+                <p>Java, JavaFX, CSS</p>
+              </figure>
 
-            <header class="container"> <!--Generic Header-->
-              <div class="row">
-                <h1 class="text-center">Skills</h1>
-              </div>  
-            </header>
-            
-            <!--Skill Card-->
-            <div class="card-deck">
-              <div class="card">
-                <img class="card-img-top" src="Java.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Java</h5>
-                  <p class="card-text">Most of my work has be done in Java and has been the most taught so far in my education. I have built my first piece of software with it and contunue to learn and expand my knowledge.</p>
-                  <p class="card-text"><small class="text-muted">Strong Language</small></p>
+              <figure class="col-sm-6">
+                <h1>Minnetrista Project</h1>
+                <p>With a multidisciplinary team of students, we are working with a local culture center to create a unique touch-based game. This game encourages the community to come and work together and bring those experiences back to their homes and families.</p>
+                <img src="minne.jpeg"/>
+                <h2>Made With</h2>
+                <p>Unreal</p>
+              </figure>
 
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="webDev.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Frontend (HTML/CSS/JS)</h5>
-                  <p class="card-text">I have begun to teach myself Frontend Developement languages to begin my jourey to becoming a Full Stack Developer. I greatly enjoy creating websites and designing pages for school and personal projects.</p>
-                  <p class="card-text"><small class="text-muted">Currently Learning</small></p>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="rails-logo.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Next Goal: Back End</h5>
-                  <p class="card-text">After I feel confident with my ability with frontend languages, I hope to move on to backend languages such as Ruby on Rails or Node.js. This will help me with my goal of becoming a Full Stack Developer.</p>
-                  <p class="card-text"><small class="text-muted">Next Goal</small></p>
-                </div>
-              </div>
             </div>
+          </section>
+                        
+      </div>
+    </div>
 
-            <footer class="container">
-                <div class="row">
-                  <p class="col-sm-4">&copy; 2019 Hunter Wallace</p>
-                  <ul class="col-sm-8">
-                    <li class="col-sm-1">
-                      <a href="https://twitter.com/hunterjw38" target="_"><img src="https://image.flaticon.com/icons/svg/8/8800.svg" ></a> <!--Twitter-->
-                    </li>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#!">&copy; 2019 Hunter Wallace</a>
 
-                    <li class="col-sm-1">
-                      <a href="https://www.linkedin.com/in/hunter-wallace-947934151/" target="_"><img src="https://image.flaticon.com/icons/svg/34/34227.svg"></a> <!--LinkedIn-->
-                    </li>
-                 
-                    <li class="col-sm-1">
-                        <a href="https://github.com/Hjwallace" target="_"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" id="contact"></a> <!--GitHub-->
-                      </li>
-                  </ul>
-                </div>
-              </footer>
+        <div class="contactBar">
 
-    
+        <a href="https://twitter.com/hunterjw38" target="_"><img src = "twitter.svg"> </a>
+        <a href="https://www.linkedin.com/in/hunter-wallace-947934151/" target="_"> <img src="linkedin.svg"></a>
+        <a href="https://github.com/Hjwallace" target="_"> <img src="github.svg"></a>
+
+      </div>
+
+      </nav>
+      
+
 </body>
 </html>

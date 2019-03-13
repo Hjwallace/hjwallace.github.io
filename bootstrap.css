@@ -5101,6 +5101,7 @@ a.badge-dark:hover, a.badge-dark:focus {
   padding-right: 0;
   padding-left: 0;
   border-radius: 0;
+  margin-bottom: 0;
 }
 
 .alert {
