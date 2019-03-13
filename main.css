@@ -60,6 +60,10 @@ html, body {
   padding-bottom: 0;
 }
 
+#part3{
+  padding-top: 2px;
+}
+
 .secondPortion{
   width: 100vw;
   height: 100%;
