@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+
 }
 
 .contactPic{
@@ -16,8 +17,12 @@ html, body {
   
 }
 
+.jumbotron{
+  background-color: #221D33;
+}
+
 .bg-dark{
-  background-color: #818181;
+  background-color: #E16D3A;
 }
 
 .contactBar img{
@@ -57,12 +62,21 @@ html, body {
   align-items: center; /* align vertical */
 }
 
+.card-body{
+  color:black;
+}
+
 #part2{
   padding-bottom: 0;
+  background-color: #261F3E;
+  color: white;
 }
 
 #part3{
   padding-top: 2px;
+  color: white;
+  background-color: #261F3E;
+
 }
 
 .secondPortion{
