@@ -168,6 +168,12 @@ html, body {
     .sidenav a {font-size: 18px;}
   }
 
+
+  #resumeTag:hover{
+    background-color:orange;
+    border-radius: 90%;
+  }
+
   /*
     Nav Bar End
 */
