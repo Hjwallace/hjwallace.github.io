@@ -1,9 +1,6 @@
 html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
 
 }
 
@@ -82,8 +79,6 @@ html, body {
 }
 
 #part3{
-  width: 100%;
-  height: auto;
   padding-top: 2px;
   color: white;
   background-color: #261F3E;
