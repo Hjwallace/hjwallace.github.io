@@ -31,8 +31,10 @@ fontLoader.load(
             }
         )
         textGeometry.center()
-        const material = new THREE.MeshMatcapMaterial({matcap: matcapTexture})
-        const text = new THREE.Mesh(textGeometry, material)
+        const textMaterial = new THREE.MeshMatcapMaterial({matcap: textTexture})
+        const donutMaterial = new THREE.MeshMatcapMaterial({matcap: donutTexture})
+
+        const text = new THREE.Mesh(textGeometry, textMaterial)
         scene.add(text)
 
 
@@ -41,7 +43,7 @@ fontLoader.load(
 
         for(let i = 0; i < 100; i++)
         {
-            const donut = new THREE.Mesh(donutGeometry, material)
+            const donut = new THREE.Mesh(donutGeometry, donutMaterial)
 
             donut.position.x = (Math.random() - 0.5) * 16
             donut.position.y = (Math.random() - 0.5) * 10
@@ -62,7 +64,7 @@ fontLoader.load(
  * Base
  */
 // Debug
-const gui = new dat.GUI()
+// const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -75,7 +77,9 @@ const scene = new THREE.Scene()
  */
 const textureLoader = new THREE.TextureLoader()
 
-const matcapTexture = textureLoader.load('/textures/matcaps/8.png')
+const textTexture = textureLoader.load('/textures/matcaps/8.png')
+const donutTexture = textureLoader.load('/textures/matcaps/6.png')
+
 
 /**
  * Object
@@ -115,8 +119,8 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.x = 0
-camera.position.y = 0
+camera.position.x = .5
+camera.position.y = .5
 camera.position.z = 3
 scene.add(camera)
 
