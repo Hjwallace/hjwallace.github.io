@@ -43,9 +43,9 @@ fontLoader.load(
         {
             const donut = new THREE.Mesh(donutGeometry, material)
 
-            donut.position.x = (Math.random() - 0.5) * 10
+            donut.position.x = (Math.random() - 0.5) * 16
             donut.position.y = (Math.random() - 0.5) * 10
-            donut.position.z = (Math.random() - 0.5) * 10
+            donut.position.z = (Math.random() - 1.25) * 10
             donut.rotation.x = Math.random() * Math.PI
             donut.rotation.y = Math.random() * Math.PI
             const scale = Math.random()
@@ -115,9 +115,9 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.x = 1
-camera.position.y = 1
-camera.position.z = 2
+camera.position.x = 0
+camera.position.y = 0
+camera.position.z = 3
 scene.add(camera)
 
 // Controls
