@@ -27,7 +27,7 @@ const textureLoader = new THREE.TextureLoader()
 
 //Bench
 
-const bench = new THREE.Group();
+const benchGroup = new THREE.Group();
 
 const benchLeftLeg = new THREE.Mesh(
     new THREE.CylinderGeometry(1,1,2,10),
@@ -47,29 +47,66 @@ const benchTop = new THREE.Mesh(
 )
 benchTop.position.y = 1.5
 
-bench.add(benchLeftLeg, benchRightLeg, benchTop)
-bench.position.set(-5,0,-4)
-bench.rotateY(4)
-scene.add(bench)
+benchGroup.add(benchLeftLeg, benchRightLeg, benchTop)
+benchGroup.position.set(-5.5,0,-5.5)
+benchGroup.rotation.y = Math.PI / 4
+scene.add(benchGroup)
 
 // Pond 
-const pond = new THREE.Group()
+const pondGroup = new THREE.Group()
 
 const pondOuterRing = new THREE.Mesh(
-    new THREE.TorusGeometry(5,1,12,48),
+    new THREE.TorusGeometry(5,.5,12,48),
     new THREE.MeshStandardMaterial({roughness: 1})
 )
-pondOuterRing.rotateX(260)
+pondOuterRing.rotation.x = Math.PI / 2
 
-const pondInnerRing = new THREE.Mesh(
-    new THREE.CylinderGeometry(4.5,4.5,1,32),
+const pondWater = new THREE.Mesh(
+    new THREE.CylinderGeometry(5,5,.5,32),
     new THREE.MeshStandardMaterial({roughness: 1})
 )
 // pondInnerRing.position.y = -.25
-pondInnerRing.material.color = new THREE.Color('blue')
+pondWater.material.color = new THREE.Color('blue')
 
-pond.add(pondOuterRing,pondInnerRing)
-scene.add(pond)
+pondGroup.add(pondOuterRing,pondWater)
+pondGroup.position.set(3,0,3)
+scene.add(pondGroup)
+
+//Trees 
+
+const treeGroup = new THREE.Group()
+
+const treeTrunk = new THREE.Mesh(
+    new THREE.BoxGeometry(1.5,10,2),
+    new THREE.MeshStandardMaterial({color:'brown'})
+)
+treeTrunk.position.y = 5
+
+
+let leafCount = 35
+const leafMaterial = new THREE.MeshStandardMaterial({color: 'green'})
+const baseLeaf = new THREE.Mesh(new THREE.BoxGeometry(2.5,3,2.5), leafMaterial)
+baseLeaf.position.y = 9
+
+treeGroup.add(baseLeaf)
+
+for(let i = 0; i < leafCount; i++){
+    const leafHeight = (Math.random() * 1)+ 2
+    const leafWidth = (Math.random() * 1)+ 2
+    const LeafDepth = (Math.random() * 1)+ 2
+    const leaf = new THREE.Mesh(new THREE.BoxGeometry(leafWidth,leafHeight,LeafDepth), leafMaterial)
+
+    leaf.position.y = (Math.random() * 3) + 7
+    leaf.position.z = (Math.random() * 8) - 4
+    leaf.position.x = (Math.random() * 8) - 4
+
+    treeGroup.add(leaf)
+}
+
+treeGroup.add(treeTrunk)
+treeGroup.position.set(-8,0,-7.5)
+
+scene.add(treeGroup)
 
 // Floor
 const floor = new THREE.Mesh(
@@ -126,7 +163,7 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.x = 0
+camera.position.x = 5
 camera.position.y = 8
 camera.position.z = 15
 scene.add(camera)
