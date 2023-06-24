@@ -1,62 +1,8 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'lil-gui'
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 
 THREE.ColorManagement.enabled = false
-
-
-/**
- * Fonts
- */
-const fontLoader = new FontLoader()
-
-fontLoader.load(
-    '/fonts/helvetiker_regular.typeface.json',
-    (font) =>
-    {
-        const textGeometry = new TextGeometry(
-            'This Site\n is Under\n Construction!\n -Hunter W',
-            {
-                font: font,
-                size: 0.5,
-                height: 0.2,
-                curveSegments: 12,
-                bevelEnabled: true,
-                bevelThickness: 0.03,
-                bevelSize: 0.02,
-                bevelOffset: 0,
-                bevelSegments: 5
-            }
-        )
-        textGeometry.center()
-        const material = new THREE.MeshMatcapMaterial({matcap: matcapTexture})
-        const text = new THREE.Mesh(textGeometry, material)
-        scene.add(text)
-
-
-        const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45)
-        // const donutMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
-
-        for(let i = 0; i < 100; i++)
-        {
-            const donut = new THREE.Mesh(donutGeometry, material)
-
-            donut.position.x = (Math.random() - 0.5) * 16
-            donut.position.y = (Math.random() - 0.5) * 10
-            donut.position.z = (Math.random() - 1.25) * 10
-            donut.rotation.x = Math.random() * Math.PI
-            donut.rotation.y = Math.random() * Math.PI
-            const scale = Math.random()
-            donut.scale.set(scale, scale, scale)
-
-            scene.add(donut)
-        }
-    }
-)
-
-
 
 /**
  * Base
@@ -70,22 +16,87 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
+const axesHelper = new THREE.AxesHelper( 5 );
+axesHelper.position.set(-6,5)
+scene.add( axesHelper );
+
 /**
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
 
-const matcapTexture = textureLoader.load('/textures/matcaps/8.png')
+//Bench
+
+const bench = new THREE.Group();
+
+const benchLeftLeg = new THREE.Mesh(
+    new THREE.CylinderGeometry(1,1,2,10),
+    new THREE.MeshStandardMaterial({roughness: 1})
+)
+benchLeftLeg.position.set(2,1)
+
+const benchRightLeg = new THREE.Mesh(
+    new THREE.CylinderGeometry(1,1,2,10),
+    new THREE.MeshStandardMaterial({roughness: 1})
+)
+benchRightLeg.position.set(-2,1)
+
+const benchTop = new THREE.Mesh(
+    new THREE.BoxGeometry(4,1,2),
+    new THREE.MeshStandardMaterial({roughness: 1})
+)
+benchTop.position.y = 1.5
+
+bench.add(benchLeftLeg, benchRightLeg, benchTop)
+bench.position.set(-5,0,-4)
+bench.rotateY(4)
+scene.add(bench)
+
+// Pond 
+const pond = new THREE.Group()
+
+const pondOuterRing = new THREE.Mesh(
+    new THREE.TorusGeometry(5,1,12,48),
+    new THREE.MeshStandardMaterial({roughness: 1})
+)
+pondOuterRing.rotateX(260)
+
+const pondInnerRing = new THREE.Mesh(
+    new THREE.CylinderGeometry(4.5,4.5,1,32),
+    new THREE.MeshStandardMaterial({roughness: 1})
+)
+// pondInnerRing.position.y = -.25
+pondInnerRing.material.color = new THREE.Color('blue')
+
+pond.add(pondOuterRing,pondInnerRing)
+scene.add(pond)
+
+// Floor
+const floor = new THREE.Mesh(
+    new THREE.PlaneGeometry(20, 20),
+    new THREE.MeshStandardMaterial({ color: '#a9c388' })
+)
+floor.rotation.x = - Math.PI * 0.5
+floor.position.y = 0
+scene.add(floor)
 
 /**
- * Object
+ * Lights
  */
-// const cube = new THREE.Mesh(
-//     new THREE.BoxGeometry(1, 1, 1),
-//     new THREE.MeshBasicMaterial()
-// )
+// Ambient light
+const ambientLight = new THREE.AmbientLight('#ffffff', 0.5)
+gui.add(ambientLight, 'intensity').min(0).max(1).step(0.001)
+scene.add(ambientLight)
 
-// scene.add(cube)
+// Directional light
+const moonLight = new THREE.DirectionalLight('#ffffff', 0.5)
+moonLight.position.set(4, 5, - 2)
+gui.add(moonLight, 'intensity').min(0).max(1).step(0.001)
+gui.add(moonLight.position, 'x').min(- 5).max(5).step(0.001)
+gui.add(moonLight.position, 'y').min(- 5).max(5).step(0.001)
+gui.add(moonLight.position, 'z').min(- 5).max(5).step(0.001)
+scene.add(moonLight)
+scene.fog = new THREE.Fog(0xcccccc, 20 , 1)
 
 /**
  * Sizes
@@ -116,8 +127,8 @@ window.addEventListener('resize', () =>
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
 camera.position.x = 0
-camera.position.y = 0
-camera.position.z = 3
+camera.position.y = 8
+camera.position.z = 15
 scene.add(camera)
 
 // Controls
