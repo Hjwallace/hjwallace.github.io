@@ -1,19 +1,20 @@
 {
-  "name": "threejs-journey-exercise",
+  "name": "temp-site-fix",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "deploy": "gh-pages -d dist"
-  },
-  "devDependencies": {
-    "vite": "^4.3.9"
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "gh-pages": "^5.0.0",
-    "lil-gui": "^0.18.1",
-    "three": "^0.153.0"
+    "vue": "^3.3.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vue-tsc": "^1.8.22"
   }
 }
