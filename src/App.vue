@@ -43,7 +43,7 @@ import ProfessionalPicture from './assets/picture2.jpg'
 
   .appContainer{
     display: flex;
-    height: 100vh;
+    height: 100dvh;
     flex-direction: row;
     background-color: #C69944;
     /* background-color: #FCF7E9; */
