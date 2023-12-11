@@ -43,12 +43,12 @@ import ProfessionalPicture from './assets/picture2.jpg'
 
   .appContainer{
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: row;
     background-color: #C69944;
     /* background-color: #FCF7E9; */
     color: #FFFFFF;
-
+    overflow: hidden;
   }
 
   .photoSection{
@@ -79,7 +79,7 @@ import ProfessionalPicture from './assets/picture2.jpg'
     height: auto;
     width: auto;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: .5rem;
     
     border: .25rem solid #000000;
     box-shadow: .5rem .5rem 0rem #000000;
@@ -116,6 +116,10 @@ import ProfessionalPicture from './assets/picture2.jpg'
   }
 
   .mainSection{
+    justify-content: start;
+  }
+
+  .photoSection{
     justify-content: start;
   }
 
