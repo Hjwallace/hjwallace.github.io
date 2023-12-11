@@ -116,17 +116,22 @@ import ProfessionalPicture from './assets/picture2.jpg'
   }
 
   .mainSection{
+    flex: 2;
     justify-content: start;
   }
 
   .photoSection{
-    justify-content: start;
+    flex: 1;
+    justify-content: center;
   }
 
   img{
     width: 50% !important;
   }
 
+  .photoText{
+    font-size: 2rem;
+  }
   h3{
     line-height: 1.5rem !important;
     width: 100% !important;
