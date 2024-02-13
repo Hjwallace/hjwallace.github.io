@@ -10,7 +10,7 @@ import ProfessionalPicture from './assets/picture2.jpg'
 
     <div class="photoSection">
 
-      <h1 class="photoText">Hello, I'm <span style="color: #447AC6;">Hunter</span>!</h1>
+      <h1 class="photoText">Hello, I'm <span style="color: rgb(8, 167, 100);">Hunter</span>!</h1>
       <img :src="ProfessionalPicture" alt="">
 
     </div>
@@ -45,7 +45,7 @@ import ProfessionalPicture from './assets/picture2.jpg'
     display: flex;
     height: 100dvh;
     flex-direction: row;
-    background-color: #C69944;
+    background-color: #3d5b5f;
     /* background-color: #FCF7E9; */
     color: #FFFFFF;
     overflow: hidden;
@@ -80,10 +80,17 @@ import ProfessionalPicture from './assets/picture2.jpg'
     width: auto;
     padding: 1rem;
     margin-top: .5rem;
+    cursor: pointer;
     
     border: .25rem solid #000000;
     box-shadow: .5rem .5rem 0rem #000000;
     font-size: clamp(.9rem, 2vw, 1.5rem);
+    background-color: #ddddd6;
+    transition: background-color .5s;
+  }
+
+  .contactButton:hover {
+    background-color: rgb(8, 167, 100);
   }
 
   .mainSectionText{
